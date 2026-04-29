@@ -1,5 +1,5 @@
 # ========================================
-# Implementasi dasar graph DST
+# Implementasi BST
 # ========================================
 
 # struktur data untuk membuat antrean, kita gunakan dari lib collection bawaan python
@@ -12,29 +12,43 @@ graph = {
     "D": ["B", "C"],
 }
 
-
-def dfs(graph, node, visited):
-    # fungsi untuk melakukan penelusuran graph menggunakan DST
-    # graph : dict yang menyimpan graph
-    # node : menyimpan node yang sedang dikunjungi
-    # visited : menyimpan node yang sudah dikunjungi
-
-    # tandai node saat ini sebagai node yg sudah dikunjugi
-    visited.add(node)
-
-    # tampilkan node saat ini
-    print(node, end=" ")
-
-    # periksa semua tetangga dari node saat ini
-    for neighbor in graph[node]:
-        # jika tetangga belum dikunjungi
-        if neighbor not in visited:
-            # lakukan dfs secara rekursif ke tetangga tersebut
-            dfs(graph, neighbor, visited)
+# # cara akses
+# for node in graph:
+#     print(node, " -> ", graph[node])
 
 
-# set visited
-visited = set()
+def bfs(graph, start):
+    # Fungsi untuk melakukan penelusuran graph dengan BFS
+    # graph : dict yang menyimpan struktur dari graph
+    # start : node awal penelusuran
 
-# Menjalankan dfs dari A
-dfs(graph, "A", visited)
+    # Queue digunakan untuk menyimpan node yang akan diproses
+    queue = deque()
+
+    # Variable untuk menyimpan node yg sudah diproses/dibaca
+    visited = set()
+
+    # Masukan node awal ke queue
+    queue.append(start)
+
+    # Tandai node awal sebagai node yang sudah dikunjungi
+    visited.add(start)
+
+    while queue:
+        # Mengambil node paling depan queue
+        node = queue.popleft()
+
+        print(node, end=" ")
+
+        # Periksa semua tetangga dari node yang diambil
+        for neighbor in graph[node]:
+            # jika neighbor belum dikunjungi
+            if neighbor not in visited:
+                # tandai sebagai sudah dikunjungi
+                visited.add(neighbor)
+                # tambahkan ke tetangga ke queue untuk diproses nanti
+                queue.append(neighbor)
+
+
+# menjalankan BFS dari node A
+bfs(graph, "A")

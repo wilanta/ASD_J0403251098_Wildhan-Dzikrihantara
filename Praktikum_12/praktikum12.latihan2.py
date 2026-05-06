@@ -69,7 +69,7 @@ Pertanyaan Analisis:
 """
 
 """
-Jawaban Analisis:
+Jawaban :
 1. Jarak terpendek dari A ke B adalah 4.
 
 2. Jarak terpendek dari A ke C adalah 2.

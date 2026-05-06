@@ -59,7 +59,7 @@ Pertanyaan Analisis:
 """
 
 """
-Jawaban Analisis:
+Jawaban :
 1. Bobot langsung dari A ke B adalah 5.
 
 2. Total bobot jalur A -> C -> B adalah 2, karena bobot A -> C = 4

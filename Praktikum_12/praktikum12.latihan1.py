@@ -37,7 +37,7 @@ Pertanyaan Analisis:
 """
 
 """
-Jawaban Analisis:
+Jawaban :
 1. Total bobot jalur A -> B -> D adalah 9, karena bobot A -> B = 4
    dan bobot B -> D = 5.
 

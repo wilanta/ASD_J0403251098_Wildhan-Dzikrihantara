@@ -59,5 +59,18 @@ Pertanyaan Analisis:
 
 """
 Jawaban :
+1. Lokasi yang paling dekat dari Gerbang adalah Kantin dengan waktu tempuh
+   2 menit.
 
+2. Waktu tempuh terpendek dari Gerbang ke Aula adalah 7 menit. Jalurnya
+   adalah Gerbang -> Kantin -> Lab -> Aula dengan total waktu
+   2 + 4 + 1 = 7 menit.
+
+3. Jalur langsung tidak selalu menghasilkan jarak paling kecil. Pada graph
+   berbobot, jalur tidak langsung bisa saja memiliki total bobot yang lebih
+   kecil dibandingkan jalur langsung.
+
+4. Dijkstra cocok digunakan pada kasus lokasi kampus ini karena semua bobot
+   waktu tempuh bernilai positif. Algoritma ini dapat memilih jalur dengan
+   total waktu paling kecil dari Gerbang ke lokasi lainnya.
 """
